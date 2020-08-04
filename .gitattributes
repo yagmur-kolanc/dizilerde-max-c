@@ -1,2 +1,31 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+#include<stdio.h>
+#include<stdlib.h>
+ int  maxelaman(int *D,int boyut){
+     int en_buyuk_deger=D[0];
+     int i;
+     for(i=0;i<boyut;i++){
+     	if(D[i]>en_buyuk_deger)
+     	   en_buyuk_deger=D[i];
+	 }
+	 return en_buyuk_deger;
+}
+     	
+
+   int main(){
+   	int *S,n,J;
+   	printf("elaman sayisi gir\n");
+   	scanf("%d",&n);
+   	S=(int*)malloc(n*sizeof(int));   	
+	printf("sayilari giriniz\n");
+	for(J=0;J<n;J++){
+	scanf("%d",&S[J]);
+	}
+	printf("Girlen sayilar:");
+	for(J=0;J<n;J++){
+		printf("%d\t",S[J]);
+}
+    printf("*****MAX=%d*****",maxelaman(S,n));
+    return 0;
+
+   }
